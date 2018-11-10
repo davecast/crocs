@@ -1,0 +1,33 @@
+.form {
+    padding: 60px 25px;
+    border-radius: 25px;
+}
+.form.form__full {
+    padding: 0;
+}
+.form__yellow {
+    background: #fec900;
+}
+
+.submit__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: #23225b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    top: calc(50% - 20px);
+    right: 20px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.submit__btn.submit__btn--yellow {
+    background: #fec900;
+}
+.submit__btn:hover {
+    opacity: 0.8;
+}

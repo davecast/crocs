@@ -1,0 +1,117 @@
+/*
+** Inicial
+*/
+.btn {
+	transition: all .3s ease-in-out;
+    vertical-align: middle;
+    display: inline-block;
+    min-width: 144px;
+    max-width: 100%;
+    padding: 10px 25px 10px;
+    font-family: 'NotoSans', Arial,'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.20em;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn:hover{opacity: 0.9;}
+.btn:active {
+	transform: translateY(2px);
+}
+/*
+** Distintos tamaños
+*/
+.btn--sm {padding: 13px 17px 12px;height: 40px;}
+/*
+** Separacion
+*/
+.btn-first {
+	margin-right: 30px;
+}
+.btn--margin {margin: 0 7px;}
+/*
+** Solo lineas
+*/
+.btn--outline:hover{opacity: 1;}
+/*
+** Distintos tipos
+*/
+.btn--blanco {
+	background: #fff;
+	color: rgba(111, 111, 111, 0.50);
+}
+.btn--blanco.btn--outline {color: #fff;background:transparent;border: 1px solid #fff;}
+.btn--blanco.btn--outline:hover{color: rgba(111, 111, 111, 0.50);background:#fff;}
+
+.btn--blue {
+	background: #23225b;
+	color: #fff;
+}
+.btn--blue:hover {
+	background: #fff;
+	color: #23225b;
+}
+.btn--blue.btn--outline {color: #23225b;background:transparent;border: 1px solid #23225b;}
+.btn--blue.btn--outline:hover{color: #fff;background:#23225b;}
+
+.btn--yellow {
+	background: #fec900;
+	color: #23225b;
+}
+.btn--yellow:hover {
+	background: #fff;
+	color: #23225b;
+}
+.btn--yellow.btn--outline {color: #fec900;background:transparent;border: 1px solid #fec900;}
+.btn--yellow.btn--outline:hover{color: #23225b;background:#fec900;}
+.blue {color:#23225b;}
+.btn__arrow {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.btn__arrow--yellow  {
+    background: #fec900;
+    color: #fff;
+}
+.btn__arrow--yellow:hover {
+    background:#23225b;
+}
+.btn-index {
+    z-index: 9;
+}
+@media screen and (orientation:landscape) {
+    
+}
+
+@media screen and (max-width: 1080px) {
+   
+}
+
+@media screen and (max-width: 991.98px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+	.btn-first {
+		margin-right: 0;
+    }
+    .btn__arrow {
+        margin-top: 45px;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+   
+}

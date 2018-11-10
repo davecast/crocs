@@ -1,0 +1,68 @@
+/*
+** Valores iniciales
+*/
+@font-face {
+    font-family: NotoSans;
+    src: url(../webfonts/NotoSans-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: NotoSans;
+    src: url(../webfonts/NotoSans-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../webfonts/Raleway-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../webfonts/Roboto-Black.ttf);
+    font-weight: 900;
+}
+
+body {background:#fff;padding: 0;margin: 0;font-family: 'NotoSans', sans-serif; font-size: 16px; line-height: 31px;}
+
+body.overflow-none {overflow: hidden;}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	background-color: white !important;
+	background-image: none !important;
+	color: #495057; !important;
+	-webkit-box-shadow:0 0 0 30px white inset !important;
+}
+
+* {box-sizing: border-box;}
+
+a,  a:active, a:visited {text-decoration: none;}
+
+h1,h2,h3,h4,h5,h6 {font-family: 'Roboto', sans-serif; font-weight: 900;}
+h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+}
+h2.big {
+    font-size: 3em;
+}
+/*
+** Colores
+*/
+.white {color:#fff;}
+.black {color:#1d1c1c;;}
+.blue {color:#23225b;}
+.yellow {color:#fec900;}
+/*
+** Colores
+*/
+.white__back {background:#fff;}
+.black__back {background:#1d1c1c;}
+.blue__black {background:#23225b;}
+.yellow__yellow {background:#fec900;}
+
+.r {
+    font-family: 'Roboto', sans-serif;
+}

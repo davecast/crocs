@@ -1,0 +1,147 @@
+.services__box {
+    position: relative;
+    z-index: 9;
+}
+.services__right::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 6px;
+    background: #fec900;
+    top: calc(50% - 3px);
+    right: -107.5px;
+    z-index: 0;
+}
+.services__center::before {
+    z-index: 0;
+    left: 0px;
+    right: 0px;
+    bottom: -295px;
+    margin: 0 auto;
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 295px;
+    background: #fec900;
+}
+.services__box figure {
+    margin: 0;
+    font-size: 0;
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    cursor: pointer;
+}
+.services__box figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    z-index: 9;
+}
+.services__name {
+    position: absolute;
+    font-size: 24px;
+    line-height: 50px;
+    bottom: 0;
+    left:0;
+    right: 0;
+    color: #fff;
+    background: #23225b;
+    height: 50px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    z-index: 9;
+    cursor: pointer;
+}
+.service__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    z-index: 10;
+    cursor: pointer;
+}
+.service__overlay_name {
+    font-size: 24px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+.service__overlay_text {
+    padding: 0 10%;
+    font-size: 12px;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+.services__box:hover .services__name {
+    opacity: 0;
+    transform: translateY(-5px);
+}
+.services__box:hover .service__overlay {
+    opacity: 1;
+}
+.services__box:hover .service__overlay_name, .services__box:hover .service__overlay_text {
+    transform: translateY(-5px);
+}
+.services__box:hover figure img {
+    filter: blur(6px);
+}
+@media screen and (orientation:landscape) {
+    
+}
+
+@media screen and (max-width: 1080px) {
+    
+}
+
+@media screen and (max-width: 991.98px) {
+    .services__name {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .service__overlay {
+        opacity: 1;
+        padding-bottom: 50px;
+    }
+    .services__name {
+        z-index: 10;
+    }
+    .services__right::after, .services__sm__center::after{
+        z-index: 0;
+        left: 0px;
+        right: 0px;
+        bottom: -295px;
+        margin: 0 auto;
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 295px;
+        background: #fec900;
+    }
+    .services__sm__center::after {
+        bottom: -50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    
+}
