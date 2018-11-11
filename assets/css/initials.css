@@ -1,7 +1,7 @@
 /*
 ** Valores iniciales
 */
-@font-face {
+/* @font-face {
     font-family: NotoSans;
     src: url(../webfonts/NotoSans-Regular.ttf);
     font-weight: normal;
@@ -23,9 +23,9 @@
     font-family: Roboto;
     src: url(../webfonts/Roboto-Black.ttf);
     font-weight: 900;
-}
+} */
 
-body {background:#fff;padding: 0;margin: 0;font-family: 'NotoSans', sans-serif; font-size: 16px; line-height: 31px;}
+body {background:#fff;padding: 0;margin: 0;font-family: 'Noto Sans', sans-serif; font-size: 16px; line-height: 31px;}
 
 body.overflow-none {overflow: hidden;}
 

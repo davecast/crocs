@@ -141,7 +141,7 @@
 	top: -25px;
 }
 .scroll__boton:hover {
-    animation: none;
+    animation-play-state: paused;
 }
 .scroll__image {
 	display: block;
