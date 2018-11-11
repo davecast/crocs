@@ -391,7 +391,7 @@
 					<h2 class="big yellow t__l">Get a Free Quote</h2>
 				</div>
 			</div>
-			<form name="formQuote" class="form form__yellow row">
+			<form id="formQuote" name="formQuote" class="form form__yellow row">
 				<div class="col--4--m col--sm-12 col--md-12 col--sm--no--margin">
 					<input class="input" type="text" name="firstname" id="firstname" placeholder="First name" />
 				</div>
@@ -411,7 +411,7 @@
 					<input class="input" name="date" placeholder="When would you need the service?"type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
 				</div>
 				<div class="col--12 col--sm-12 col--md-12">
-					<div class="checkbox__container">
+					<div class="checkbox__container" id="checkboxes">
 						<div class="blue t__p">Service:</div>
 						<label class="checkboxes">
 							<input type="checkbox" name="services[]" value="Loading">
@@ -441,10 +441,10 @@
 					</div>
 				</div>
 				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin">
-					<input class="input" type="text" name="from" id="from" placeholder="From (City, State)" />
+					<input class="input" type="text" name="fromcity" id="fromcity" placeholder="From (City, State)" />
 				</div>
 				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin">
-					<input class="input" type="text" name="to" id="to" placeholder="To (City, State)" />
+					<input class="input" type="text" name="tocity" id="tocity" placeholder="To (City, State)" />
 				</div>
 				<div class="col--6--m col--6--last col--sm-12 col--md-12 col--half--full select_box">
 					<div class="select_box__arrow">
@@ -625,13 +625,19 @@
 
 	<!-- Modal -->
 
-    
+	<!-- Message Box -->
+	<div id="message__box" class="message__box"></div>
+	<!-- Message Box -->
+	   
     <script src="assets/js/bundle.js"></script>
+    <script src="assets/js/messageBox.js"></script>
+    <script src="assets/js/validators.js"></script>
     <script src="assets/js/scrollMonitor.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/scrollSmooth.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="assets/js/form-quote.js"></script>
 
 </body>
 </html>
