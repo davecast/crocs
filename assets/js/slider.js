@@ -78,13 +78,13 @@ $(window).on("load", ()=>{
 		$($btns_left).on('click', () => {
 			moveL($slider__box)
 			clearInterval($slider__box.sliderInterval)
-			//autoplay($slider__box)
+			autoplay($slider__box)
 		})
 
 		$($btns_right).on('click', () => {
 			moveR($slider__box)
 			clearInterval($slider__box.sliderInterval)
-			//autoplay($slider__box)
+			autoplay($slider__box)
 		})
 	}
 
