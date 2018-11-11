@@ -160,5 +160,12 @@
 	.checkbox__container {
 		flex-wrap: wrap;
 		height: auto;
+		padding: 15px 20px;
+	}
+	.checkboxes {
+		margin-bottom: 8px;
+	}
+	.checkbox__container {
+		flex-direction: column;
 	}
 }
