@@ -1,4 +1,4 @@
-@import './fontawesome-all.min.css';
+@import './loading.css';
 @import './initials.css';
 @import './inputs.css';
 @import './layout.css';
@@ -9,4 +9,3 @@
 @import './modal.css';
 @import './footer.css';
 @import './form.css';
-@import './loading.css';
