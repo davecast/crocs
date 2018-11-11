@@ -73,7 +73,7 @@ $(window).on("load", ()=>{
 		$($slider__box.lastElementChild).insertBefore($slider__box.firstElementChild)
 		$($slider__box).css("margin-left", `-${100}%`)
 
-		//autoplay($slider__box)
+		autoplay($slider__box)
 
 		$($btns_left).on('click', () => {
 			moveL($slider__box)

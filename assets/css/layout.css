@@ -21,6 +21,43 @@
     height: 60px;
     width: 100%;
 }
+.phone__call {
+    position: fixed;
+    bottom: 15px;
+    right: 5%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+.phone__call span {
+    color: #fff;
+    font-size: 18px;
+    line-height: 100%;
+    position: absolute;
+    left: -100px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.phone__call:hover span {
+    opacity: 1;
+    left: -150px;
+}
+.phone__call a {
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone__call a img {
+    width: 30px;
+    height: 30px;
+}
 #about {
     padding-bottom: 0;
 }
