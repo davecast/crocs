@@ -14,6 +14,14 @@
     
 </head>
 <body>
+	<div id="loading" class="loading">
+		<div class="loading__preloader">
+			<img class="loading__logo" src="assets/temp/logobotom-fix.png" alt="loading">
+			<div class="loading__animation">
+				<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+			</div>
+		</div>
+	</div>
     <header id="header" class="header">
 		<div class="container">
 			<div class="header__logo">
@@ -591,7 +599,7 @@
 			</ul>
 		</div>
 		<div class="footer__bottom">
-			<p>Diseñado por <strong>diCloudve</strong> y desarrollado por <a href="https://davecast.github.io/" target="_blank"><strong>Davecast</strong></a> </p>
+			<p>Diseñado por <a href="https://www.instagram.com/dicloudve/?hl=es-la" target="_blank"><strong>diCloudve</strong></a> y desarrollado por <a href="https://davecast.github.io/" target="_blank"><strong>Davecast</strong></a> </p>
 		</div>
 	</footer>
 	<!-- Modal -->
@@ -599,7 +607,6 @@
 	<div class="overlay" id="overlay"></div>
 	<div class="modal" id="modal">
 		<div id="modal-content">
-			
 		</div>
 		<div id="hide-modal" class="modal-buttons">
 			<i class="fas fa-times"></i>
@@ -609,6 +616,7 @@
 	<!-- Modal -->
 
     <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/loading.js"></script>
     <script src="assets/js/bundle.js"></script>
     <script src="assets/js/scrollMonitor.js"></script>
     <script src="assets/js/header.js"></script>
