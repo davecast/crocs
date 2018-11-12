@@ -2,6 +2,32 @@
     padding: 60px 25px;
     border-radius: 25px;
 }
+.form.form__hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+}
+#messageQuote, #messageContact {
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+#messageQuote.active__quote {
+    opacity: 1;
+    background: #fec900;
+    padding: 20px 10px;
+    border-radius: 20px;
+    color: #23225b;
+    text-align: center;
+}
+#messageContact.active_contact {
+    opacity: 1;
+    background: #23225b;
+    padding: 20px 10px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+}
 .form.form__full {
     padding: 0;
 }
@@ -24,6 +50,7 @@
     right: 20px;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    z-index: 3;
 }
 .submit__btn.submit__btn--yellow {
     background: #fec900;

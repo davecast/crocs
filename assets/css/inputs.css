@@ -8,7 +8,7 @@
     text-align: center;
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif;
-	margin-bottom: 15px;
+	z-index: 2;
 	position: relative;
 }
 .select_box {
@@ -16,7 +16,6 @@
 	height: 45px;
     border-radius: 22.5px;
     background: #fff;
-    margin-bottom: 15px;
 }
 .select_box__arrow {
 	position: absolute;
@@ -43,6 +42,7 @@
     resize: none;
 	padding: 10px 80px 10px 35px;
 	text-align: left;
+	z-index: 2;
 }
 .input.textarea.input__blue, .input.input__blue {
 	background:#23225b;
@@ -53,6 +53,44 @@
 }
 .input:focus {
 	outline:0px;
+}
+.input__box {
+	position: relative;
+}
+.input__box.input__error::after {
+	position: absolute;
+	content: attr(data-error);
+	width: 250px;
+	height: 40px;
+    top: 0px;
+    opacity: 0;
+    padding: 4px 8px;
+    font-size: 10px;
+    line-height: 15px;
+    color: #f03636;
+    border: 1px solid #f03636;
+    background: #ffcaca;
+    border-radius: 8px;
+    transition: all .25s ease-in-out;
+    box-sizing: border-box;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.input__box.input__error:hover::after {
+	opacity: 1;
+	z-index: 4;
+	top: -100%;
+}
+.input__box.textarea__box.input__error:hover::after {
+	top: -55px;
+}
+.input__box.input__error::after:hover {
+	top: 0px;
+	opacity: 0;
+	z-index: 0;
 }
 .input + span {
 	visibility: hidden;
@@ -128,7 +166,6 @@
 	font-family: 'Roboto', sans-serif;
 	color: #23225b;
 }
-
 .input--warning {
 	border: 2px solid #f03636;
 	color: #f03636;

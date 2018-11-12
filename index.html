@@ -392,23 +392,23 @@
 				</div>
 			</div>
 			<form id="formQuote" name="formQuote" class="form form__yellow row">
-				<div class="col--4--m col--sm-12 col--md-12 col--sm--no--margin">
+				<div class="col--4--m col--sm-12 col--md-12 col--sm--no--margin input__box m__b">
 					<input class="input" type="text" name="firstname" id="firstname" placeholder="First name" />
 				</div>
-				<div class="col--4--m col--sm-12 col--md-12 col--sm--no--margin">
+				<div class="col--4--m col--sm-12 col--md-12 col--sm--no--margin input__box m__b">
 					<input class="input" type="text" name="lastname" id="lastname" placeholder="Last name" />
 				</div>
-				<div class="col--4--m col--4--last col--sm-12 col--md-12">
+				<div class="col--4--m col--4--last col--sm-12 col--md-12 input__box m__b">
 					<input class="input" type="email" name="email" id="email" placeholder="E-mail" />
 				</div>
-				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin">
+				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin input__box m__b">
 					<input class="input" type="text" name="primaryphone" id="primaryphone" placeholder="Primary phone" />
 				</div>
-				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin">
-					<input class="input" type="text" name="secundaryphone" id="secundaryphone" placeholder="Secondary phone" />
+				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin input__box m__b">
+					<input class="input" type="text" name="secondaryphone" id="secondaryphone" placeholder="Secondary phone" />
 				</div>
-				<div class="col--6--m col--6--last col--sm-12 col--md-12 col--half--full">
-					<input class="input" name="date" placeholder="When would you need the service?"type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
+				<div class="col--6--m col--6--last col--sm-12 col--md-12 col--half--full input__box m__b">
+					<input class="input" name="date" placeholder="When would you need the service?" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
 				</div>
 				<div class="col--12 col--sm-12 col--md-12">
 					<div class="checkbox__container" id="checkboxes">
@@ -440,13 +440,13 @@
 						</label>
 					</div>
 				</div>
-				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin">
+				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin input__box m__b">
 					<input class="input" type="text" name="fromcity" id="fromcity" placeholder="From (City, State)" />
 				</div>
-				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin">
+				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin input__box m__b">
 					<input class="input" type="text" name="tocity" id="tocity" placeholder="To (City, State)" />
 				</div>
-				<div class="col--6--m col--6--last col--sm-12 col--md-12 col--half--full select_box">
+				<div class="col--6--m col--6--last col--sm-12 col--md-12 col--half--full select_box input__box ">
 					<div class="select_box__arrow">
 						<i class="fas fa-caret-down"></i>
 					</div>
@@ -460,13 +460,14 @@
 						<option value="few-piese">A few piece</option>
 					</select>
 				</div>
-				<div class="col--12 col--sm-12 col--md-12 relative">
+				<div class="col--12 col--sm-12 col--md-12 relative input__box textarea__box">
 					<textarea class="input textarea m__no" name="description" id="description" cols="35" rows="8" placeholder="Description"></textarea>
 					<div id="submit__btn" class="submit__btn">
 						<i class="fas fa-caret-right"></i>
 					</div>
 				</div>
 			</form>
+			<div id="messageQuote"></div>	
 		</div>
 	</section>
 
@@ -548,23 +549,24 @@
 
 	<section class="section__bottom">
 		<div class="container">
-			<form name="formContact" class="form form__full row">
-				<div class="col--4--m col--sm-12 col--md-12 col--sm--no--margin">
+			<form id="formContact" name="formContact" class="form form__full row">
+				<div class="col--4--m col--sm-12 col--md-12 col--sm--no--margin input__box m__b">
 					<input class="input input__blue" type="text" name="name" id="name" placeholder="Name" />
 				</div>
-				<div class="col--4--m col--sm-12 col--md-12 col--sm--no--margin">
+				<div class="col--4--m col--sm-12 col--md-12 col--sm--no--margin input__box m__b">
 					<input class="input input__blue" type="text" name="phone" id="phone" placeholder="Phone" />
 				</div>
-				<div class="col--4--m col--4--last col--sm-12 col--md-12">
-					<input class="input input__blue" type="email" name="email" id="email" placeholder="E-mail" />
+				<div class="col--4--m col--4--last col--sm-12 col--md-12 input__box m__b">
+					<input class="input input__blue" type="email" name="emailContact" id="emailContact" placeholder="E-mail" />
 				</div>
-				<div class="col--12 col--sm-12 col--md-12 relative">
-					<textarea class="input input__blue textarea m__no" name="description" id="description" cols="35" rows="8" placeholder="Description"></textarea>
-					<div id="submit__btn" class="submit__btn submit__btn--yellow">
+				<div class="col--12 col--sm-12 col--md-12 relative input__box textarea__box">
+					<textarea class="input input__blue textarea m__no" name="descriptionContact" id="descriptionContact" cols="35" rows="8" placeholder="Description"></textarea>
+					<div id="submit__contact" class="submit__btn submit__btn--yellow">
 						<i class="fas fa-caret-right"></i>
 					</div>
 				</div>
 			</form>
+			<div id="messageContact"></div>
 		</div>
 	</section>
 
@@ -609,7 +611,7 @@
 			</ul>
 		</div>
 		<div class="footer__bottom">
-			<p>Diseñado por <a href="https://www.instagram.com/dicloudve/?hl=es-la" target="_blank"><strong>diCloudve</strong></a> y desarrollado por <a href="https://davecast.github.io/" target="_blank"><strong>Davecast</strong></a> </p>
+			<p>Designed by <a href="https://www.instagram.com/dicloudve/?hl=es-la" target="_blank"><strong>diCloudve</strong></a> & Developed by <a href="https://davecast.github.io/" target="_blank"><strong>Davecast</strong></a> </p>
 		</div>
 	</footer>
 	<!-- Modal -->
@@ -630,6 +632,7 @@
 	<!-- Message Box -->
 	   
     <script src="assets/js/bundle.js"></script>
+    <script src="assets/js/config.js"></script>
     <script src="assets/js/messageBox.js"></script>
     <script src="assets/js/validators.js"></script>
     <script src="assets/js/scrollMonitor.js"></script>
@@ -637,7 +640,9 @@
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/scrollSmooth.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="assets/js/crud.js"></script>
     <script src="assets/js/form-quote.js"></script>
+    <script src="assets/js/form-contact.js"></script>
 
 </body>
 </html>

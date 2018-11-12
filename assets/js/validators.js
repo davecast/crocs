@@ -1,44 +1,153 @@
 "use strict"
-const validate = (type, value) => {
+const validate = (type, key, value) => {
     let regex, response
     
-    let validationType = `${type}-${content}`
+    let validationType = `${type}-${key}`
 
     switch (validationType) {
-        case 'text':
+        case 'text-name':
+            regex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/i
+            response = {
+                validation: regex.test(value),
+                message: 'Only letters'
+            }
+            if(regex.test(value) && value.length <= 3) {
+                response.validation = false
+                response.message = 'First name must be longer to 3 characters'
+            }
+            return response
+        case 'text-firstname':
+            regex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/i
+            response = {
+                validation: regex.test(value),
+                message: 'Only letters'
+            }
+            if(regex.test(value) && value.length <= 3) {
+                response.validation = false
+                response.message = 'First name must be longer to 3 characters'
+            }
+            return response
+        case 'text-lastname':
+            regex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/i
+            response = {
+                validation: regex.test(value),
+                message: 'Only letters'
+            }
+            if(regex.test(value) && value.length <= 3) {
+                response.validation = false
+                response.message = 'Last name must be longer to 3 characters'
+            }
+            return response
+        case 'textarea-description':
             regex = /^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\.\, ]+$/i
             response = {
                 validation: regex.test(value),
-                message: 'Solo se permiten (. or ,) como carateres especiales.'
+                message: 'Only (. or ,) are allowed as special characters'
             }
             /* Reparar esto agregar espacios en blanco */
             if(regex.test(value) && value.length <= 25) {
                 response.validation = false
-                response.message = 'La descripción debe tener mas de 25 caracteres.'
+                response.message = 'The description must have more than 25 characters'
             }
             if(regex.test(value) && value.length > 140) {
                 response.validation = false
-                response.message = 'La descripción debe tener menos de 140 caracteres.'
+                response.message = 'The description must have more than 140 characters'
             }
             return response
-        case 'select-one':
+        case 'textarea-descriptionContact':
+            regex = /^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\.\, ]+$/i
+            response = {
+                validation: regex.test(value),
+                message: 'Only (. or ,) are allowed as special characters'
+            }
+            /* Reparar esto agregar espacios en blanco */
+            if(regex.test(value) && value.length <= 25) {
+                response.validation = false
+                response.message = 'The description must have more than 25 characters'
+            }
+            if(regex.test(value) && value.length > 140) {
+                response.validation = false
+                response.message = 'The description must have more than 140 characters'
+            }
+            return response
+        case 'text-fromcity':
+            regex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/i
+            response = {
+                validation: regex.test(value),
+                message: 'Only letters.'
+            }
+            /* Reparar esto agregar espacios en blanco */
+            if(regex.test(value) && value.length <= 10) {
+                response.validation = false
+                response.message = 'The description must have more than 10 characters'
+            }
+            if(regex.test(value) && value.length > 140) {
+                response.validation = false
+                response.message = 'The description must have more than 140 characters'
+            }
+            return response
+        case 'text-tocity':
+            regex = /^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/i
+            response = {
+                validation: regex.test(value),
+                message: 'Only letters'
+            }
+            /* Reparar esto agregar espacios en blanco */
+            if(regex.test(value) && value.length <= 10) {
+                response.validation = false
+                response.message = 'The description must have more than 10 characters'
+            }
+            if(regex.test(value) && value.length > 140) {
+                response.validation = false
+                response.message = 'The description must have more than 140 characters'
+            }
+            return response
+        case 'select-one-size':
             response = {
                 validation: value == 'none' ? false: true,
-                message: 'Debe seleccionar un usuario'
+                message: 'You must select one option'
             }
             return response
-        case 'email-correo':
+        case 'email-email':
             regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
             response = {
                 validation: regex.test(value),
-                message: 'Formato invalido pruebe con name@host.com'
+                message: 'Invalid format, try with name@host.com'
             }
             return response
-        case 'text':
+        case 'email-emailContact':
+            regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+            response = {
+                validation: regex.test(value),
+                message: 'Invalid format, try with name@host.com'
+            }
+            return response
+        case 'text-primaryphone':
             regex = /^\+?0?(\d{1,2}\s?\-?[^\da-zA-Z,])?(\d{1,3}\s?\-?[^\da-zA-Z,]){2,2}\d{4,4}[#pe]?\d*$/
             response = {
                 validation: regex.test(value),
-                message: 'Formato invalido pruebe +58 424 682 5418 o +58 424-682-5418'
+                message: 'Invalid format, try with +1 555 555 5555 o +1 555-555-5555.'
+            }
+            return response
+        case 'text-phone':
+            regex = /^\+?0?(\d{1,2}\s?\-?[^\da-zA-Z,])?(\d{1,3}\s?\-?[^\da-zA-Z,]){2,2}\d{4,4}[#pe]?\d*$/
+            response = {
+                validation: regex.test(value),
+                message: 'Invalid format, try with +1 555 555 5555 o +1 555-555-5555.'
+            }
+            return response
+        case 'text-secondaryphone':
+            regex = /^\+?0?(\d{1,2}\s?\-?[^\da-zA-Z,])?(\d{1,3}\s?\-?[^\da-zA-Z,]){2,2}\d{4,4}[#pe]?\d*$/
+            response = {
+                validation: regex.test(value),
+                message: 'Invalid format, try with +1 555 555 5555 o +1 555-555-5555.'
+            }
+            return response
+        case 'text-date':
+            
+            response = {
+                validation: true,
+                message: ''
             }
             return response
         default:
