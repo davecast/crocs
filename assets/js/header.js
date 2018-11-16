@@ -2,15 +2,16 @@
 
 window.onscroll = function() {
 	onScrollAction()
-	
 }
 
 var header = document.getElementById('header')
 const $headerMenu = document.getElementById('header__menu')
 const $burguerMenu = document.getElementById('burguer__menu')
+
 let $home = document.getElementById('slider')
 let $about = document.getElementById('about')
-// let $services = document.getElementById('services')
+let $services = document.getElementById('services')
+let $contact = document.getElementById('contact')
 
 function onScrollAction () {
 	
@@ -19,6 +20,17 @@ function onScrollAction () {
 	} else {
 		header.classList.remove("header-fixed")
 	}
+
+	if ( (window.pageYOffset > $home.offsetTop - 150) && (window.pageYOffset < ($home.offsetHeight + $home.offsetTop - 150) ) ) {
+		activeMenu('#slider')
+	}
+	else if ( (window.pageYOffset > $about.offsetTop - 150) && (window.pageYOffset < ($about.offsetHeight + $about.offsetTop - 150) ) ) {
+		activeMenu('#about')
+	} else if ( (window.pageYOffset > $services.offsetTop - 150) && (window.pageYOffset < ($services.offsetHeight + $services.offsetTop - 150) ) ) {
+		activeMenu('#services')
+	} else if ( (window.pageYOffset > $contact.offsetTop - 150) && (window.pageYOffset < ($contact.offsetHeight + $contact.offsetTop - 150) ) ) {
+		activeMenu('#contact')
+	}
 }
 function activeMenu (id) {
 	let $beforeElement = document.querySelector('.menu--active')
@@ -26,10 +38,8 @@ function activeMenu (id) {
 		$beforeElement.classList.remove('menu--active')
 	}
 	
-
 	let $nextElement = document.querySelector(`a[href='${id}']`)
 	$nextElement.classList.add('menu--active')
-	
 }
 
 $burguerMenu.addEventListener('click', (e) => {
@@ -38,17 +48,3 @@ $burguerMenu.addEventListener('click', (e) => {
 	$burguerMenu.classList.toggle('fa-times')
 	$burguerMenu.classList.toggle('fa-bars')
 })
-
-watcherHome = scrollMonitor.create($home)
-watcherAbout = scrollMonitor.create($about)
-// watcherServices = scrollMonitor.create($services)
-
-watcherHome.fullyEnterViewport(function() {
-	activeMenu('#slider')
-});
-watcherAbout.fullyEnterViewport(function() {
-	activeMenu('#about')
-});
-// watcherServices.fullyEnterViewport(function() {
-// 	activeMenu('#services')
-// });

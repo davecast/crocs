@@ -4,8 +4,37 @@ $(window).on("load", ()=>{
     const $formQuote = document.getElementById('formQuote')
     const $submit__btn = document.getElementById('submit__btn')
     let $checkboxes = document.getElementById('checkboxes')
-    const $messageQuote = document.getElementById('messageQuote');
+    const $messageQuote = document.getElementById('messageQuote')
+    const $date_small = document.getElementById('date_small')
+    const $date__md = document.getElementById('date__md')
+    const $date__box = document.getElementById('date__box')
+
+    let ua = window.navigator.userAgent;
+    let iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+    let webkit = !!ua.match(/WebKit/i);
+    let iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
     
+    if (iOSSafari) {
+        const mq = window.matchMedia( "(max-width: 575.98px)" );
+        mq.addListener(widthMedia);
+        widthMedia(mq);
+        function widthMedia (mq) {
+            let inputHtml = "";
+
+            if (mq.matches) {
+                inputHtml = `<input class="input" name="date" type="date" id="date_small" />`
+                $date__box.innerHTML = inputHtml 	
+            } else {
+                inputHtml = `<input class="input" name="date" placeholder="When would you need the service?" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date__md" />`
+                $date__box.innerHTML = inputHtml 		
+            }
+        }
+    } else {
+        let inputHtml = `<input class="input" name="date" placeholder="When would you need the service?" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date__md" />`
+        $date__box.innerHTML = inputHtml 
+    }
+    
+
     (async function formQuote (){
 
         $formQuote.addEventListener('submit', (e) => {
@@ -24,6 +53,7 @@ $(window).on("load", ()=>{
             let serviceList = []
 
             for (var pair of formData.entries()) {
+                console.log(pair[0], pair[1])
                 if (pair[0] == 'services[]') {
                     serviceList.push(pair[1])
                 } else {

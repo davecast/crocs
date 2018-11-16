@@ -10,12 +10,26 @@
     font-family: 'Noto Sans', sans-serif;
 	z-index: 2;
 	position: relative;
+
+}
+input[type='date'], input[type='time'] {
+	-webkit-appearance: none;
+	-webkit-min-logical-width: calc(100% - 16px);
+	-webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em; 
 }
 .select_box {
 	position: relative;
 	height: 45px;
     border-radius: 22.5px;
     background: #fff;
+}
+.date__box {
+
+}
+.date__text {
+
 }
 .select_box__arrow {
 	position: absolute;
