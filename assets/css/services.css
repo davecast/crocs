@@ -117,10 +117,7 @@
 }
 
 @media screen and (max-width: 767.98px) {
-    .service__overlay {
-        opacity: 1;
-        padding-bottom: 50px;
-    }
+    
     .services__name {
         z-index: 10;
     }
