@@ -150,6 +150,13 @@ const validate = (type, key, value) => {
                 message: ''
             }
             return response
+        case 'date-date':
+            
+            response = {
+                validation: true,
+                message: ''
+            }
+            return response
         default:
             return false
     }

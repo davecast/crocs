@@ -377,7 +377,9 @@
     }
 }
 @media screen and (max-width: 575.98px) {
-    
+    .phone__call {
+        bottom: 70px;
+    }
     #testimonials .testimonial__avatar {
         width: 120px;
         height: 120px;

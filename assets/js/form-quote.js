@@ -5,8 +5,6 @@ $(window).on("load", ()=>{
     const $submit__btn = document.getElementById('submit__btn')
     let $checkboxes = document.getElementById('checkboxes')
     const $messageQuote = document.getElementById('messageQuote')
-    const $date_small = document.getElementById('date_small')
-    const $date__md = document.getElementById('date__md')
     const $date__box = document.getElementById('date__box')
 
     let ua = window.navigator.userAgent;
@@ -22,15 +20,15 @@ $(window).on("load", ()=>{
             let inputHtml = "";
 
             if (mq.matches) {
-                inputHtml = `<input class="input" name="date" type="date" id="date_small" />`
+                inputHtml = `<label class="label__small" for="date">When would you need the service?</label><input class="input" name="date" type="date" id="date" />`
                 $date__box.innerHTML = inputHtml 	
             } else {
-                inputHtml = `<input class="input" name="date" placeholder="When would you need the service?" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date__md" />`
+                inputHtml = `<input class="input" name="date" placeholder="When would you need the service?" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />`
                 $date__box.innerHTML = inputHtml 		
             }
         }
     } else {
-        let inputHtml = `<input class="input" name="date" placeholder="When would you need the service?" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date__md" />`
+        let inputHtml = `<input class="input" name="date" placeholder="When would you need the service?" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />`
         $date__box.innerHTML = inputHtml 
     }
     
@@ -53,7 +51,7 @@ $(window).on("load", ()=>{
             let serviceList = []
 
             for (var pair of formData.entries()) {
-                console.log(pair[0], pair[1])
+               
                 if (pair[0] == 'services[]') {
                     serviceList.push(pair[1])
                 } else {

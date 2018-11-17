@@ -81,7 +81,9 @@
 		</div>
 		<div class="slider__box" data-slider-delay="10000" data-direction="right" >
 			<div class="slider__item">
-				<img class="slider__imagen" src="assets/temp/ppal-home.jpg" alt="">
+				<div class="slider__overlay"></div>
+				<img class="slider__imagen slider__imagen_mobile" src="assets/temp/ppal-home-mobile.jpg" alt="">
+				<img class="slider__imagen slider__imagen_desktop" src="assets/temp/ppal-home.jpg" alt="">
 				<div class="container slider__container slider__container--active">
 					<div class="row">
 						<div class="col--6 col--sm-12 col--md-12 slider__content">
@@ -96,7 +98,9 @@
 				</div>
 			</div>
 			<div class="slider__item">
-				<img class="slider__imagen" src="assets/temp/loading-and-unloading.jpg" alt="">
+				<div class="slider__overlay"></div>
+				<img class="slider__imagen slider__imagen_mobile" src="assets/temp/loading-and-unloading-mobile.jpg" alt="">
+				<img class="slider__imagen slider__imagen_desktop" src="assets/temp/loading-and-unloading.jpg" alt="">
 				<div class="container slider__container slider__container--active">
 					<div class="row">
 						<div class="col--6 col--sm-12 col--md-12 slider__content">
@@ -111,7 +115,9 @@
 				</div>
 			</div>
 			<div class="slider__item">
-				<img class="slider__imagen" src="assets/temp/local-moving.jpg" alt="">
+				<div class="slider__overlay"></div>
+				<img class="slider__imagen slider__imagen_mobile" src="assets/temp/local-moving-mobile.jpg" alt="">
+				<img class="slider__imagen slider__imagen_desktop" src="assets/temp/local-moving.jpg" alt="">
 				<div class="container slider__container">
 					<div class="row">
 						<div class="col--6 col--sm-12 col--md-12 blanco slider__content">
@@ -126,7 +132,9 @@
 				</div>
 			</div>
 			<div class="slider__item">
-				<img class="slider__imagen" src="assets/temp/long-distance-moving.jpg" alt="">
+				<div class="slider__overlay"></div>
+				<img class="slider__imagen slider__imagen_mobile" src="assets/temp/long-distance-moving-mobile.jpg" alt="">
+				<img class="slider__imagen slider__imagen_desktop" src="assets/temp/long-distance-moving.jpg" alt="">
 				<div class="container slider__container">
 					<div class="row">
 						<div class="col--6 col--sm-12 col--md-12 blanco slider__content">
@@ -141,7 +149,9 @@
 				</div>
             </div>
             <div class="slider__item">
-				<img class="slider__imagen" src="assets/temp/packing-or-unpacking.jpg" alt="">
+				<div class="slider__overlay"></div>
+				<img class="slider__imagen slider__imagen_mobile" src="assets/temp/packing-or-unpacking__mobile.jpg" alt="">
+				<img class="slider__imagen slider__imagen_desktop" src="assets/temp/packing-or-unpacking.jpg" alt="">
 				<div class="container slider__container">
 					<div class="row">
 						<div class="col--6 col--sm-12 col--md-12 blanco slider__content">
@@ -156,6 +166,7 @@
 				</div>
             </div>
             <div class="slider__item">
+				<div class="slider__overlay"></div>
 				<img class="slider__imagen" src="assets/temp/housekeeping.jpg" alt="">
 				<div class="container slider__container">
 					<div class="row">
@@ -298,82 +309,92 @@
 			<div class="row">
 				<div class="col--4 col--4--m  col--sm-12 col--md-12 m__b--x-2">
 					<div class="services__box services__right">
-						<div data-template="services" data-src="loading-and-unloading.jpg" data-name="Loading and Unloading" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open" class="service__overlay modal__open">
-							<div class="service__overlay_name">
-								Loading and Unloading
+						<div class="services__box_hover relative">
+							<div data-template="services" data-src="loading-and-unloading.jpg" data-name="Loading and Unloading" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open" class="service__overlay modal__open">
+								<div class="service__overlay_name">
+									Loading and Unloading
+								</div>
+								<div class="service__overlay_text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								</div>
 							</div>
-							<div class="service__overlay_text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
+							<figure>
+								<img class="f_img" src="assets/temp/loading-and-unloading.jpg" alt="" />
+							</figure>
+							<div class="services__name">Loading or Unloading</div>
 						</div>
-						<figure>
-							<img class="f_img" src="assets/temp/loading-and-unloading.jpg" alt="" />
-						</figure>
-						<div class="services__name">Loading or Unloading</div>
 					</div>
 				</div>
 				<div class="col--4 col--4--m col--sm-12 col--md-12 m__b--x-2">
 					<div class="services__box services__right services__center">
-						<div data-template="services" data-src="local-moving.jpg" data-name="Local Moving" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open" class="service__overlay modal__open">
-							<div class="service__overlay_name">
-								Local Moving
+						<div class="services__box_hover relative">
+							<div data-template="services" data-src="local-moving.jpg" data-name="Local Moving" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open" class="service__overlay modal__open">
+								<div class="service__overlay_name">
+									Local Moving
+								</div>
+								<div class="service__overlay_text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								</div>
 							</div>
-							<div class="service__overlay_text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
+							<figure>
+								<img class="f_img" src="assets/temp/local-moving.jpg" alt="" />
+							</figure>
+							<div class="services__name">Local Moving</div>
 						</div>
-						<figure>
-							<img class="f_img" src="assets/temp/local-moving.jpg" alt="" />
-						</figure>
-						<div class="services__name">Local Moving</div>
 					</div>
 				</div>
 				<div class="col--4--m col--4--last col--sm-12 col--md-12 m__b--x-2">
 					<div class="services__box">
-						<div data-template="services" data-src="long-distance-moving.jpg" data-name="Long Distance Moving" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open" class="service__overlay modal__open">
-							<div class="service__overlay_name">
-								Long Distance Moving
+						<div class="services__box_hover relative">
+							<div data-template="services" data-src="long-distance-moving.jpg" data-name="Long Distance Moving" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open" class="service__overlay modal__open">
+								<div class="service__overlay_name">
+									Long Distance Moving
+								</div>
+								<div class="service__overlay_text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								</div>
 							</div>
-							<div class="service__overlay_text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
+							<figure>
+								<img class="f_img" src="assets/temp/long-distance-moving.jpg" alt="" />
+							</figure>
+							<div class="services__name">Long Distance Moving</div>
 						</div>
-						<figure>
-							<img class="f_img" src="assets/temp/long-distance-moving.jpg" alt="" />
-						</figure>
-						<div class="services__name">Long Distance Moving</div>
 					</div>
 				</div>
 				<div class="col--6--m col--sm-12 col--md-12 m__b--x-2">
 					<div class="services__box services__right">
-						<div data-template="services" data-src="packing-or-unpacking.jpg" data-name="Packing or unpacking" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open">
-							<div class="service__overlay_name">
-								Packing or unpacking
+						<div class="services__box_hover relative">
+							<div data-template="services" data-src="packing-or-unpacking.jpg" data-name="Packing or unpacking" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open">
+								<div class="service__overlay_name">
+									Packing or unpacking
+								</div>
+								<div class="service__overlay_text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								</div>
 							</div>
-							<div class="service__overlay_text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
+							<figure>
+								<img class="f_img" src="assets/temp/packing-or-unpacking.jpg" alt="" />
+							</figure>
+							<div class="services__name">Packing or unpacking</div>
 						</div>
-						<figure>
-							<img class="f_img" src="assets/temp/packing-or-unpacking.jpg" alt="" />
-						</figure>
-						<div class="services__name">Packing or unpacking</div>
 					</div>
 				</div>
 				<div class="col--6--m col--6--last  col--sm-12 col--md-12">
 					<div class="services__box services__sm__center">
-						<div data-template="services" data-src="housekeeping.jpg" data-name="Housekeeping" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open">
-							<div class="service__overlay_name">
-								Housekeeping
+						<div class="services__box_hover relative">
+							<div data-template="services" data-src="housekeeping.jpg" data-name="Housekeeping" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." class="service__overlay modal__open">
+								<div class="service__overlay_name">
+									Housekeeping
+								</div>
+								<div class="service__overlay_text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								</div>
 							</div>
-							<div class="service__overlay_text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</div>
+							<figure>
+								<img class="f_img" src="assets/temp/housekeeping.jpg" alt="" />
+							</figure>
+							<div class="services__name">Housekeeping</div>
 						</div>
-						<figure>
-							<img class="f_img" src="assets/temp/housekeeping.jpg" alt="" />
-						</figure>
-						<div class="services__name">Housekeeping</div>
 					</div>
 				</div>
 				<div class="col--12 col--sm-12 col--md-12 t__c btn-index ">
@@ -407,7 +428,7 @@
 				<div class="col--3--m col--sm-12 col--md-12 col--sm--no--margin input__box m__b">
 					<input class="input" type="text" name="secondaryphone" id="secondaryphone" placeholder="Secondary phone" />
 				</div>
-				<div class="col--6--m col--6--last col--sm-12 col--md-12 col--half--full input__box date__box m__b" id="date__box">
+				<div class="col--6--m col--6--last col--sm-12 col--md-12 col--half--full input__box date__box m__b t__c" id="date__box">
 					
 				</div>
 				<div class="col--12 col--sm-12 col--md-12">

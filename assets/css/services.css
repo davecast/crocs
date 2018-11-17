@@ -63,7 +63,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0,0,0,.4);
+    background: rgba(35, 34, 91, .55);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,19 +88,18 @@
     text-align: center;
     transition: all .3s ease-in-out;
 }
-
-.services__box:hover .services__name {
+.services__box_hover:hover .services__name {
     opacity: 0;
     transform: translateY(-5px);
 }
-.services__box:hover .service__overlay {
+.services__box_hover:hover .service__overlay {
     opacity: 1;
 }
-.services__box:hover .service__overlay_name, .services__box:hover .service__overlay_text {
+.services__box_hover:hover .service__overlay_name, .services__box_hover:hover .service__overlay_text {
     transform: translateY(-5px);
 }
-.services__box:hover figure img {
-    filter: blur(6px);
+.services__box_hover:hover figure img {
+    filter: blur(3px);
 }
 @media screen and (orientation:landscape) {
     

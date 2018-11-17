@@ -15,12 +15,10 @@ function modalTemplate (template, content) {
 			hmtlContent = `
 				<div class="modal__service">
 					<div class="row">
-						<div class="col--6 col--sm-12 col--md-12">
+						<div class="col--12 col--sm-12 col--md-12">
 							<div class="modal__name__service">${content.name}</div>
-							<div class="modal__text__service m__b--x-2">${content.text}</div>
-						</div>
-						<div class="col col--sm--no--padding col--6 col--sm-12 col--md-12">
 							<img class="modal__img__service" src="assets/temp/${content.src}" />
+							<div class="modal__text__service m__b--x-2">${content.text}</div>
 						</div>
 					</div>
 				</div>

@@ -51,6 +51,21 @@
 		line-height: 20px;
 		font-size: 12px;
 	}
+	@media screen and (max-width: 575.98px) {
+		.message__box {
+			width: 100%;
+			max-height: 110px;
+			overflow: hidden;
+		}
+		.message--active {
+			padding: 10px 5px;
+			height: 40px;
+		}
+		.message {
+			border-radius: 10px;
+			flex: 1 0 auto;
+		}
+	}
 	/*
 	** Message Box
 	*/

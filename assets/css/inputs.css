@@ -14,7 +14,7 @@
 }
 input[type='date'], input[type='time'] {
 	-webkit-min-logical-width: calc(100% - 16px);
-    min-height: 1.2em; 
+    min-height: 2.375rem;
 }
 .select_box {
 	position: relative;
@@ -27,6 +27,10 @@ input[type='date'], input[type='time'] {
 }
 .date__text {
 
+}
+.label__small {
+	font-size: 16px;
+	color: #23225b;
 }
 .select_box__arrow {
 	position: absolute;
