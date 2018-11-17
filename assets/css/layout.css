@@ -328,6 +328,9 @@
 }
 
 @media screen and (max-width: 767.98px) {
+    .map__iframe iframe {
+        width: 95%;
+    }
     .special__padding__half--md, .special__title.special__title__half, .special__padding__half  {
         padding-left: 5%;
     }
@@ -377,6 +380,7 @@
     }
 }
 @media screen and (max-width: 575.98px) {
+    
     .phone__call {
         bottom: 70px;
     }
