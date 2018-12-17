@@ -71,10 +71,10 @@ const validate = (type, key, value) => {
             }
             return response
         case 'text-fromcity':
-            regex = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/i
+            regex = /^[-.?!,;:()# A-Za-z0-9]*$/i
             response = {
                 validation: regex.test(value),
-                message: 'Only letters.'
+                message: 'Only this special char -.?!,;:()#.'
             }
             /* Reparar esto agregar espacios en blanco */
             if(regex.test(value) && value.length <= 10) {
@@ -87,10 +87,10 @@ const validate = (type, key, value) => {
             }
             return response
         case 'text-tocity':
-            regex = /^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/i
+            regex = /^[-.?!,;:()# A-Za-z0-9]*$/i
             response = {
                 validation: regex.test(value),
-                message: 'Only letters'
+                message: 'Only this special char'
             }
             /* Reparar esto agregar espacios en blanco */
             if(regex.test(value) && value.length <= 10) {
@@ -123,24 +123,24 @@ const validate = (type, key, value) => {
             }
             return response
         case 'text-primaryphone':
-            regex = /^\+?0?(\d{1,2}\s?\-?[^\da-zA-Z,])?(\d{1,3}\s?\-?[^\da-zA-Z,]){2,2}\d{4,4}[#pe]?\d*$/
+            regex = /^[-+# 0-9]*$/i
             response = {
                 validation: regex.test(value),
-                message: 'Invalid format, try with +1 555 555 5555 o +1 555-555-5555.'
+                message: 'Invalid phone number.'
             }
             return response
         case 'text-phone':
-            regex = /^\+?0?(\d{1,2}\s?\-?[^\da-zA-Z,])?(\d{1,3}\s?\-?[^\da-zA-Z,]){2,2}\d{4,4}[#pe]?\d*$/
+            regex = /^[-+# 0-9]*$/i
             response = {
                 validation: regex.test(value),
-                message: 'Invalid format, try with +1 555 555 5555 o +1 555-555-5555.'
+                message: 'Invalid phone number.'
             }
             return response
         case 'text-secondaryphone':
-            regex = /^\+?0?(\d{1,2}\s?\-?[^\da-zA-Z,])?(\d{1,3}\s?\-?[^\da-zA-Z,]){2,2}\d{4,4}[#pe]?\d*$/
+            regex = /^[-+# 0-9]*$/i
             response = {
                 validation: regex.test(value),
-                message: 'Invalid format, try with +1 555 555 5555 o +1 555-555-5555.'
+                message: 'Invalid phone number.'
             }
             return response
         case 'text-date':

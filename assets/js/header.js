@@ -12,6 +12,7 @@ let $home = document.getElementById('slider')
 let $about = document.getElementById('about')
 let $services = document.getElementById('services')
 let $contact = document.getElementById('contact')
+let $quote = document.getElementById('quote')
 
 function onScrollAction () {
 	
@@ -28,6 +29,8 @@ function onScrollAction () {
 		activeMenu('#about')
 	} else if ( (window.pageYOffset > $services.offsetTop - 150) && (window.pageYOffset < ($services.offsetHeight + $services.offsetTop - 150) ) ) {
 		activeMenu('#services')
+	} else if ( (window.pageYOffset > $quote.offsetTop - 150) && (window.pageYOffset < ($quote.offsetHeight + $quote.offsetTop - 150) ) ) {
+		activeMenu('#$quote')
 	} else if ( (window.pageYOffset > $contact.offsetTop - 150) && (window.pageYOffset < ($contact.offsetHeight + $contact.offsetTop - 150) ) ) {
 		activeMenu('#contact')
 	}

@@ -61,8 +61,8 @@ h2.big {
 */
 .white__back {background:#fff;}
 .black__back {background:#1d1c1c;}
-.blue__black {background:#23225b;}
-.yellow__yellow {background:#fec900;}
+.blue__back {background:#23225b;}
+.yellow__back {background:#fec900;}
 
 .r {
     font-family: 'Roboto', sans-serif;
