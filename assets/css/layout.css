@@ -292,7 +292,9 @@
     min-height: 250px;
     height: 100%;
 }
-
+#quote .col {
+    padding-right: 0;
+}
 @media screen and (max-width: 1150px) {
     .container.about__container {
         width: 95%;
