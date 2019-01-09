@@ -23,9 +23,8 @@
 .container__full {padding:45px 0;max-width: 100%;width: 100%;}
 .container__full .row {max-width: 90%;margin: 0 auto;}
 .container.about__container {
-    margin-right: 0;
     max-width: calc( 1080px + ((100% - 1080px) / 2 ) );
-    width: auto;
+    width: 0 auto;
 }
 .shape__top__divider {
     position: absolute;
@@ -353,11 +352,20 @@
 }
 
 @media screen and (max-width: 767.98px) {
+    #formContact {
+        margin-bottom: 25px;
+    }
+    #quote .col {
+        padding: 0;
+    }
     .map__iframe iframe {
         width: 100%;
     }
     .special__padding__half--md, .special__title.special__title__half, .special__padding__half  {
         padding-left: 5%;
+    }
+    .container.about__container {
+        margin: 0 auto;
     }
     .col--lg-offset-1 {margin-left: 0%;}
     .col--lg-offset-2 {margin-left: 0%;}
