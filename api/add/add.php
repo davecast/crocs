@@ -4,7 +4,10 @@
     
         include_once "../config/config-file.php";
         include_once "../config/query.php";
+        include_once "../mail.php";
         
+        $sendEmail  = 'fmorales@crocsmovers.com';
+
         if (isset($_REQUEST['type']) ) {
             $type = $_REQUEST['type'];
             sleep(1);
@@ -32,6 +35,23 @@
                     'firstname' => $firstname, 
                     'lastname' => $lastname
                     ) );
+
+                  
+                    $subject        = "{$firstname} {$lastname} send you a quote";
+                    $mailContent = "Names: {$firstname} {$lastname} \n"	
+                                    ."Email: {$email} \n"
+                                    ."Primary phone: {$primaryphone} \n"
+                                    ."Secondary phone: {$secondaryphone} \n"
+                                    ."Date: {$date} \n"
+                                    ."Services: {$services} \n"
+                                    ."From: {$fromcity} \n"
+                                    ."To: {$tocity} \n"
+                                    ."Size: {$size} \n"
+                                    ."Description: {$description} \n";
+
+                   mail($sendEmail, $subject, $mailContent);
+
+
                 } else {
                     echo json_encode( array( 'error' => true ) );
                 }
@@ -52,6 +72,14 @@
                     'name' => $name, 
                     'email' => $email
                     ) );
+
+                    $subject        = "{$name} send you a contact";
+                    $mailContent = "Names: {$name} \n"	
+                                    ."Email: {$email} \n"
+                                    ."Phone: {$phone} \n"
+                                    ."Description: {$description} \n";
+                    
+                    mail($sendEmail, $subject, $mailContent);
                 } else {
                     echo json_encode( array( 'error' => true ) );
                 }

@@ -56,30 +56,31 @@ $(window).on("load", ()=>{
                     serviceList.push(pair[1])
                 } else {
                     let $input = document.getElementById(pair[0])
-                    
-                    if (validarEmpty(pair[1])) {
-                        $input.classList.remove('input--danger')
-                        $input.classList.add('input--warning')
-                        
-                        warning.push(pair[0])
-
-                    } else {
-                    
-                        $input.classList.remove('input--warning')
-                    
-                        let valid = validate($input.type, pair[0], pair[1])
-
-                        if ( valid.validation ) {
+                    if (pair[0] != 'g-recaptcha-response') {
+                        if (validarEmpty(pair[1])) {
                             $input.classList.remove('input--danger')
-                            $input.parentElement.classList.remove("input__error"); 
-                            $input.parentElement.setAttribute("data-error", ""); 
+                            $input.classList.add('input--warning')
+                            
+                            warning.push(pair[0])
+
                         } else {
-                            danger.push(pair[0])
-                            $input.classList.add('input--danger')
-                            $input.parentElement.classList.add("input__error"); 
-                            $input.parentElement.setAttribute("data-error", valid.message); 
-                        }
                         
+                            $input.classList.remove('input--warning')
+                        
+                            let valid = validate($input.type, pair[0], pair[1])
+
+                            if ( valid.validation ) {
+                                $input.classList.remove('input--danger')
+                                $input.parentElement.classList.remove("input__error"); 
+                                $input.parentElement.setAttribute("data-error", ""); 
+                            } else {
+                                danger.push(pair[0])
+                                $input.classList.add('input--danger')
+                                $input.parentElement.classList.add("input__error"); 
+                                $input.parentElement.setAttribute("data-error", valid.message); 
+                            }
+                            
+                        }
                     }
                 }
                 
@@ -94,17 +95,19 @@ $(window).on("load", ()=>{
             if (warning.length > 0) {
                 addMessage('This fields are required', 'warning')
             }
-
+            if (warning.length == 0 && !captchaQuote && danger.length == 0) {
+                addMessage('reCAPTCHA are required', 'warning')
+            }
             
-            if (danger.length == 0 && warning.length == 0) {
+            if (danger.length == 0 && warning.length == 0 && captchaQuote) {
 
-                let postData = await setPost(`${API_BASE}/api/add/quote.php?type=quote` , formData)
+                let postData = await setPost(`${API_BASE}/api/add/add.php?type=quote` , formData)
                 
                 if (await postData) {
                     if (!postData.error) {
                         $form.classList.add('form__hidden')
                         $messageQuote.classList.add('active__quote')
-                        $messageQuote.innerText = `Hi <strong>${postData.firstname} ${postData.lastname}</strong> your quote has be send.`;                            
+                        $messageQuote.innerHTML = `<p>Hi <strong>${postData.firstname} ${postData.lastname}</strong> your quote has be send.</p>`;                            
                     } else {
                         addMessage('Upss.. Some error on database', 'danger')
                     }

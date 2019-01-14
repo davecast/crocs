@@ -5,3 +5,7 @@ function isEmpty(obj) {
     }
     return true;
 }
+
+let captchaContact = false
+let captchaQuote = false
+

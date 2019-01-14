@@ -191,3 +191,11 @@ const clearForm = (form) => {
          } 
     }
 }
+
+function verifyCaptchaContact () {
+    captchaContact = true
+}
+
+function verifyCaptchaQuote () {
+    captchaQuote = true
+}

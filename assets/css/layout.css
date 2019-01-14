@@ -415,7 +415,7 @@
     }
 }
 @media screen and (max-width: 575.98px) {
-    
+
     .phone__call {
         bottom: 70px;
     }
@@ -476,5 +476,12 @@
     .t__p {
         font-size: 14px;
         line-height: 29px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .recaptcha-sm {
+        max-width: 100%;
+        overflow: hidden;
     }
 }
