@@ -24,7 +24,10 @@
 .container__full .row {max-width: 90%;margin: 0 auto;}
 .container.about__container {
     max-width: calc( 1080px + ((100% - 1080px) / 2 ) );
-    width: 0 auto;
+    margin: 0 auto;
+}
+.container.about__container.about__right_0 {
+    margin-right: 0 !important;
 }
 .shape__top__divider {
     position: absolute;
@@ -354,6 +357,9 @@
 }
 
 @media screen and (max-width: 767.98px) {
+    .col-sm-padding-right {
+        padding: 5%;
+    }
     #formContact {
         margin-bottom: 25px;
     }

@@ -4,7 +4,6 @@
     
         include_once "../config/config-file.php";
         include_once "../config/query.php";
-        include_once "../mail.php";
         
         $sendEmail  = 'fmorales@crocsmovers.com';
 
@@ -49,7 +48,7 @@
                                     ."Size: {$size} \n"
                                     ."Description: {$description} \n";
 
-                   mail($sendEmail, $subject, $mailContent);
+                   //mail($sendEmail, $subject, $mailContent);
 
 
                 } else {
@@ -63,7 +62,7 @@
                 $email = $_REQUEST['emailContact'];
                 $description = $_REQUEST['descriptionContact'];
 
-                $sql = "INSERT INTO contact (id_contact, name, phone, email, description) VALUES (NULL, '{$name}', '{$email}', '{$phone}', '{$description}')";
+                $sql = "INSERT INTO contact (id_contact, name, phone, email, description) VALUES (NULL, '{$name}', '{$phone}', '{$email}', '{$description}')";
                 
                 $results = insertDataBase($sql);
                 
@@ -79,7 +78,7 @@
                                     ."Phone: {$phone} \n"
                                     ."Description: {$description} \n";
                     
-                    mail($sendEmail, $subject, $mailContent);
+                    //mail($sendEmail, $subject, $mailContent);
                 } else {
                     echo json_encode( array( 'error' => true ) );
                 }

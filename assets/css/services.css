@@ -139,5 +139,17 @@
 }
 
 @media screen and (max-width: 575.98px) {
-    
+    .services__box_hover:hover .services__name {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    .services__box_hover:hover .service__overlay {
+        opacity: 0;
+    }
+    .services__box_hover:hover .service__overlay_name, .services__box_hover:hover .service__overlay_text {
+        transform: translateY(0px);
+    }
+    .services__box_hover:hover figure img {
+        filter: blur(0px);
+    }
 }

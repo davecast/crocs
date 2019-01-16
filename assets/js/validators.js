@@ -93,10 +93,7 @@ const validate = (type, key, value) => {
                 message: 'Only this special char'
             }
             /* Reparar esto agregar espacios en blanco */
-            if(regex.test(value) && value.length <= 10) {
-                response.validation = false
-                response.message = 'The description must have more than 10 characters'
-            }
+            
             if(regex.test(value) && value.length > 140) {
                 response.validation = false
                 response.message = 'The description must have more than 140 characters'
@@ -163,7 +160,13 @@ const validate = (type, key, value) => {
     
 }
 
-const validarEmpty = (value) => {
+const validarEmpty = (value, key) => {
+    if (key == 'secondaryphone') {
+        return false
+    }
+    if (key == 'tocity') {
+        return false
+    }
     /*
         Validate if one input type file is empty
     */

@@ -6,8 +6,10 @@ $(window).on("load", ()=>{
     let $checkboxes = document.getElementById('checkboxes')
     const $messageQuote = document.getElementById('messageQuote')
     const $date__box = document.getElementById('date__box')
+    const $quoteBtn = document.getElementById('quoteBtn')
 
     let ua = window.navigator.userAgent;
+    let sendFormQuote = false
     let iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
     let webkit = !!ua.match(/WebKit/i);
     let iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
@@ -41,7 +43,10 @@ $(window).on("load", ()=>{
         })
 
         $submit__btn.addEventListener('click', (e) => {
-            addForm($formQuote)
+            if (!sendFormQuote) {
+                addForm($formQuote)
+                console.log('hola')
+            }
         })     
 
         async function addForm ($form) {
@@ -57,7 +62,7 @@ $(window).on("load", ()=>{
                 } else {
                     let $input = document.getElementById(pair[0])
                     if (pair[0] != 'g-recaptcha-response') {
-                        if (validarEmpty(pair[1])) {
+                        if (validarEmpty(pair[1], pair[0])) {
                             $input.classList.remove('input--danger')
                             $input.classList.add('input--warning')
                             
@@ -100,6 +105,8 @@ $(window).on("load", ()=>{
             }
             
             if (danger.length == 0 && warning.length == 0 && captchaQuote) {
+                $quoteBtn.innerText = 'Loading'
+                sendFormQuote = true
 
                 let postData = await setPost(`${API_BASE}/api/add/add.php?type=quote` , formData)
                 
@@ -107,7 +114,7 @@ $(window).on("load", ()=>{
                     if (!postData.error) {
                         $form.classList.add('form__hidden')
                         $messageQuote.classList.add('active__quote')
-                        $messageQuote.innerHTML = `<p>Hi <strong>${postData.firstname} ${postData.lastname}</strong> your quote has be send.</p>`;                            
+                        $messageQuote.innerHTML = `<p>Hi your quote has be send.</p>`;                            
                     } else {
                         addMessage('Upss.. Some error on database', 'danger')
                     }

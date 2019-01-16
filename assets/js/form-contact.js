@@ -3,8 +3,10 @@ $(window).on("load", ()=>{
     
     const $formContact = document.getElementById('formContact')
     const $submit__contact = document.getElementById('submit__contact')
-    const $messageContact = document.getElementById('messageContact');
-    
+    const $messageContact = document.getElementById('messageContact')
+    const $contactBtn = document.getElementById('contactBtn')
+    let sendForm = false;
+
     (async function formContact (){
 
         $formContact.addEventListener('submit', (e) => {
@@ -13,10 +15,13 @@ $(window).on("load", ()=>{
         })
 
         $submit__contact.addEventListener('click', (e) => {
-            addFormContact($formContact)
+            if (!sendForm) {
+                addFormContact($formContact)
+            }
         })     
 
         async function addFormContact ($form) {
+
             let formData = new FormData($form)
             let warning = []
             let danger = []
@@ -60,6 +65,9 @@ $(window).on("load", ()=>{
             }
 
             if (danger.length == 0 && warning.length == 0 && captchaContact) {
+                
+                $contactBtn.innerText = 'Loading'
+                sendForm = true
 
                 let postData = await setPost(`${API_BASE}/api/add/add.php?type=contact` , formData)
                 
@@ -67,7 +75,7 @@ $(window).on("load", ()=>{
                     if (!postData.error) {
                         $form.classList.add('form__hidden')
                         $messageContact.classList.add('active_contact')
-                        $messageContact.innerHTML = `Hi <strong>${postData.name},</strong> we will be in touch with you soon.`;                            
+                        $messageContact.innerHTML = `We will be in touch with you soon.`;                            
                     } else {
                         addMessage('Upss.. Some error on database', 'danger')
                     }
